@@ -1,0 +1,31 @@
+<input style="height:80px; width:25% ;size:20;" id="Q" placeholder="Quarters">
+<br>
+<input style="height:80px; width:25%; size:20;" id="N" placeholder="Nickels">
+<br>
+<input style="height:80px; width:25%; size:20;" id="D" placeholder="Dimes">
+<br>
+<input style="height:80px; width:25%; size:20;" id="P" placeholder="Pennies">
+<br>
+<button style="color:red;background-color:blue; height:80px" id="btn"><font style="font-family: Ubuntu; font-size:35;">SHOW ME THE MONEY</font></button>
+<script>
+    document.getElementById("btn").addEventListener("click",func);
+    function func(){
+        let Q=document.getElementById("Q").value;
+        let N=document.getElementById("N").value;
+        let D=document.getElementById("D").value;
+        let P=document.getElementById("P").value;
+
+        Q=parseFloat(Q);
+        N=parseFloat(N);
+        D=parseFloat(D);
+        P=parseFloat(P);
+        console.log(Q);
+
+        Q=Q*0.25
+        N=N*0.05
+        D=D*0.10
+        P=P*0.01
+
+        alert(Q+N+D+P);
+    }
+</script>
